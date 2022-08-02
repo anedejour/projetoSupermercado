@@ -1,0 +1,91 @@
+MENU PRINCIPAL
+
+1 - Listar produtos
+2 - Exibir carrinho
+3 - Adicionar produto ao carrinho
+4 - Remover produto do carrinho
+5 - Finalizar compra
+6 - Esvaziar carrinho
+
+1 - Listar produtos
+    ID    Produto     Valor
+    1      Banana      10.00
+    2      Arroz       20.00
+
+    Volta para menu PRINCIPAL
+
+2 - Exibir carrinho
+    ID    Produto     Valor Unitario     Quantidade      Total
+    1     Banana      10.00              2               20.00
+    2     Arroz       20.00              1               20.00
+
+    Valor Total       40.00
+
+    Volta para menu PRINCIPAL
+
+3 - Adicionar produto ao carrinho
+    Digite o codigo do produto 
+    Digite a Quantidade
+
+
+    Casos de teste
+    codigo e qtd validas
+    produto ja adicionado no carrinho
+
+    Casos de erro
+    codigo do produto que nao esta  na contido na Lista
+    qtd menor que 1
+
+    Volta para menu PRINCIPAL
+
+4 - Remover produto do carrinho
+    listar os produtos no carrinho
+    digite o id do produto para excluir
+    se tiver mais de 1 produto, confirmar qtd a ser excluido
+    confirmar
+    exibir carrinho atualizado
+
+    casos de erro
+    id nao existe no carrinho
+    tentar excluir qtd maior do que esta no carrinho
+    
+
+    Volta para menu PRINCIPAL
+
+
+5 - Finalizar compra
+    listar o carrinho
+    selecione metodo de pagamento
+    1 - dinheiro 
+    2 - credito 
+    3 - debito
+    se for dinheiro ou debito, ganha 5% desconto
+
+    casos de erro
+    opcao de pagamento invalida
+    se carrinho esta vazio, nao eh processado pagamento
+
+    imprime o cupom
+    ID    Produto     Valor Unitario     Quantidade      Total
+    1     Banana      10.00              2               20.00
+    2     Arroz       20.00              1               20.00
+
+    Subtotal        40.00
+    Forma de pagamento Debito
+    Desconto        5%
+    Valor Total     38.00
+
+    Caminho para salvar csv
+    Mostrar caminho padrao
+
+6 - Esvaziar carrinho
+    listar produtos
+    confirmar esvaziar o carrinho
+    se sim, esvaziar carrinho
+    
+    Volta para menu PRINCIPAL
+
+
+    
+    
+
