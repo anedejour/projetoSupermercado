@@ -1,5 +1,6 @@
 from pacotes.produtos import exibir_lista_produtos
-from pacotes.compras import adicionar_no_carrinho, exibir_produtos_carrinho, carrinho
+from pacotes.compras import adicionar_no_carrinho, exibir_produtos_carrinho, carrinho, remover_produto_do_carrinho, excluir_todos_itens_do_carrinho, exibir_produtos_carrinho
+
 
 
 def main():
@@ -63,44 +64,22 @@ def listar_produtos():
 
 def exibir_carrinho():
 
-    if carrinho == {}:
-        opcao = int(input("Seu carrinho esta vazio. Deseja adicionar produtos? (1 - sim 2 - nao): "))
-
-        if opcao == 1:
-            print("Produtos disponiveis no mercado: ")
-            adicionar_produto()
-        else:
-            print("O que deseja fazer? ")  
-
-    else:
-        exibir_produtos_carrinho()
+    exibir_produtos_carrinho()
 
 def adicionar_produto():
 
-        exibir_lista_produtos()
+    exibir_lista_produtos()
 
-        adicionar_no_carrinho()
+    adicionar_no_carrinho()
 
 def remover_produto():
     exibir_carrinho()
-    print("remover produto")
+
+    remover_produto_do_carrinho()
 
 def esvaziar_carrinho():
 
-    print("esvaziado")
-
-
-    exibir_carrinho()
-
-    confirmar = int(input("Tem certeza que quer remover os produtos? Digite 1 para sim e 2 para nao: "))
-
-    if confirmar == 1:
-        segunda_chance_compra = int(input("Carrinho vazio. Deseja efetuar compras? Digite 1 para sim e 2 para nao: "))
-
-        if segunda_chance_compra == 1:
-            listar_produtos()
-        elif segunda_chance_compra == 2:
-            print("Obrigado pela visita. Volte sempre.")        
+    excluir_todos_itens_do_carrinho()
 
 if __name__ == "__main__":
     main()

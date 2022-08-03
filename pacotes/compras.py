@@ -9,27 +9,35 @@ def adicionar_no_carrinho():
 
     carrinho[codigo] = quantidade
 
-
-# minha_dupla = ("algo", 300)
-# nome = minha_dupla[0]
-# valor = minha_dupla[1]
-# _, valor = minha_dupla
-
-# def calcular_total_por_produto():
-
-#     for produto_comprado in carrinho.keys():
-#         for produto in produtos_disponiveis.keys():
-#             if produto_comprado == produto:
-#                 valor_unitario = pegar_valor()
-#     return valor_unitario
-
-
 def exibir_produtos_carrinho():
 
-    print("ID -  PRODUTO,VALOR  -   QUANTIDADE")
+    if len(carrinho.keys()) < 1:
+        print("O seu carrinho esta vazio")
+    
+    else:
+        print("ID", "PRODUTO", "VALOR UNITARIO", "QUANTIDADE", "VALOR TOTAL")
+        for id_produto_do_carrinho, quantidade in carrinho.items():
+            nome, valor = produtos_disponiveis[id_produto_do_carrinho]
+            valor_total_por_produto = valor * quantidade
+            print(id_produto_do_carrinho, nome, valor, quantidade, valor_total_por_produto)
 
-    for id_produto, produto_e_valor in carrinho.items():
-        for id_produto_disponivel, produto_e_valor_que_existem_no_mercado in produtos_disponiveis.items():
-            if id_produto == id_produto_disponivel:
-                print(produtos_disponiveis[id_produto_disponivel])
+def excluir_todos_itens_do_carrinho():
+
+    excluir_todos_itens = int(input("Deseja excluir todos os itens do seu carrinho? 1 para sim e 2 para nao: "))
+
+    if excluir_todos_itens == 1:
+        carrinho.clear()
+        print("Carrinho vazio! O que deseja fazer agora? ")
+
+    elif excluir_todos_itens == 2:
+        print("O que deseja fazer agora?")
+
+def remover_produto_do_carrinho():
+
+    codigo_do_produto_para_excluir = int(input("Digite o codigo do produto que deseja excluir: "))
+
+    for codigo in carrinho.copy():
+        if codigo_do_produto_para_excluir == codigo:
+            carrinho.pop(codigo)
+            print("Produto excluido")
 
