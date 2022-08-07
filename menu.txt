@@ -74,10 +74,7 @@ MENU PRINCIPAL
     Forma de pagamento Debito
     Desconto        5%
     Valor Total     38.00
-
-    Caminho para salvar csv
-    Mostrar caminho padrao
-
+    
 6 - Esvaziar carrinho
     listar produtos
     confirmar esvaziar o carrinho
